@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup node
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v4.0.3
         with:
           node-version: 20
           cache: yarn
@@ -38,13 +38,13 @@ jobs:
           target: Firefox
 
       - name: Download Firefox binary
-        uses: robinraju/release-downloader@v1.10
+        uses: robinraju/release-downloader@v1.11
         with:
           releaseId: ${{ github.event.release.id }}
           fileName: ${{ steps.parse_firefox_release.outputs.addon_asset_name }}
 
       - name: Download source archive
-        uses: robinraju/release-downloader@v1.10
+        uses: robinraju/release-downloader@v1.11
         with:
           releaseId: ${{ github.event.release.id }}
           fileName: ${{ steps.parse_firefox_release.outputs.src_asset_name }}
@@ -71,7 +71,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup node
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v4.0.3
         with:
           node-version: 20
           cache: yarn
@@ -96,7 +96,7 @@ jobs:
           target: Edge
 
       - name: Download Edge binary
-        uses: robinraju/release-downloader@v1.10
+        uses: robinraju/release-downloader@v1.11
         with:
           releaseId: ${{ github.event.release.id }}
           fileName: ${{ steps.parse_edge_release.outputs.addon_asset_name }}

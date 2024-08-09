@@ -236,7 +236,6 @@ const deinflectRuleData: Array<
   ['ごう', 'ぐ', Type.Initial, Type.GodanVerb, [Reason.Volitional]],
   ['しろ', 'す', Type.Initial, Type.SuruVerb, [Reason.Imperative]],
   ['しろ', 'する', Type.Initial, Type.SuruVerb, [Reason.Imperative]],
-  ['する', '', Type.SuruVerb, Type.MasuStem, [Reason.Humble]],
   ['する', '', Type.SuruVerb, Type.NounVS, [Reason.SuruNoun]],
   ['せず', 'する', Type.Initial, Type.SuruVerb, [Reason.Zu]],
   ['せぬ', 'する', Type.Initial, Type.SuruVerb, [Reason.Negative]],
@@ -466,10 +465,13 @@ export function deinflect(word: string): CandidateWord[] {
       // られる and させる exist as separate rules that bypass the irrealis stem
       // type, we ignore the the rules with a to-type of IrrealisStem for the
       // passive and causative, i.e. the rules for れる and せる.
+      // Similarly, we need to ignore the rule for the causative passive, as
+      // the contraction of せられる to される is incorrect for Ichidan verbs.
       const inapplicableForm =
         type & Type.IrrealisStem &&
         (thisCandidate.reasonChains[0][0] == Reason.Passive ||
-          thisCandidate.reasonChains[0][0] == Reason.Causative);
+          thisCandidate.reasonChains[0][0] == Reason.Causative ||
+          thisCandidate.reasonChains[0][0] == Reason.CausativePassive);
 
       if (!inapplicableForm) {
         result.push({

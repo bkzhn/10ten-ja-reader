@@ -8,22 +8,23 @@ app.
 
 ## [Unreleased]
 
+## [1.20.0] - 2024-07-25
+
 - Extended the support for honorific speech
   thanks to [@Enellis](https://github.com/Enellis)
   ([#1822](https://github.com/birchill/10ten-ja-reader/pull/1822)).
-  - Added imperative for くださる.
-  - Added addtional forms of ます.
+  - Added imperative for くださる
+  - Added addtional forms of ます
     - たら・たり and て-form
     - Imperative
-  - Added respectful speech.
+  - Added respectful speech
     - Continuous form (ていらっしゃる, てらっしゃる)
     - なさる
     - になる
-  - Added humble speech.
+  - Added humble speech
     - Continuous form (ておる, とる)
-    - masu-stem + する
     - 致す
-  - Fixed recognition of irregular verb forms of 宣う.
+  - Fixed recognition of irregular verb forms of 宣う
 - Added support for irregular verb forms of 給う
   thanks to [@Enellis](https://github.com/Enellis)
   ([#1470](https://github.com/birchill/10ten-ja-reader/issues/1470)).
@@ -33,10 +34,16 @@ app.
 - Added supported for doing unit conversions to imperial units
   thanks to [@StarScape](https://github.com/StarScape)
   ([#1836](https://github.com/birchill/10ten-ja-reader/pull/1836))
+- Added links from WaniKani annotations in the words and kanji tabs to the
+  corresponding page on the WaniKani homepage
+  ([#1876](https://github.com/birchill/10ten-ja-reader/pull/1876)).
 - Fixed a condition that could cause some preferences to be overwritten causing,
   for example, the puck to suddenly disappear.
 - Fixed duplicate matching of names with both 新字体 and 旧字体
   ([#1830](https://github.com/birchill/10ten-ja-reader/issues/1830)).
+- Fixed display of matches on search-only forms so they don't appear as part of
+  the entry
+  ([#1547](https://github.com/birchill/10ten-ja-reader/issues/1547)).
 
 ## [1.19.1] - 2024-06-08
 
@@ -1175,7 +1182,8 @@ app.
 
 - Initial version (yes, it took me four attempts to publish).
 
-[unreleased]: https://github.com/birchill/10ten-ja-reader/compare/v1.19.1...HEAD
+[unreleased]: https://github.com/birchill/10ten-ja-reader/compare/v1.20.0...HEAD
+[1.20.0]: https://github.com/birchill/10ten-ja-reader/compare/v1.19.1...v1.20.0
 [1.19.1]: https://github.com/birchill/10ten-ja-reader/compare/v1.19.0...v1.19.1
 [1.19.0]: https://github.com/birchill/10ten-ja-reader/compare/v1.18.0...v1.19.0
 [1.18.0]: https://github.com/birchill/10ten-ja-reader/compare/v1.17.1...v1.18.0

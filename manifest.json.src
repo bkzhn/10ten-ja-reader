@@ -10,7 +10,7 @@
   "name": "10ten Japanese Reader",
   /*#endif*/
   "author": "Brian Birtles",
-  "version": "1.19.1",
+  "version": "1.20.0",
   /*#if supports_browser_specific_settings*/
   "browser_specific_settings": {
     "gecko": {
@@ -166,8 +166,7 @@
       "docs/introducing-the-mouse.html",
       "fonts/*.woff2"
     ],
-    "matches": [ "<all_urls>" ],
-    "use_dynamic_url": true
+    "matches": [ "<all_urls>" ]
   }],
   /*#else*/
   "web_accessible_resources": [
